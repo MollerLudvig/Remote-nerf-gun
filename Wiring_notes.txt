@@ -1,0 +1,36 @@
+Battery(-) ---> MOSFET(GND)
+
+Battery(+) ---> MOSFET(VIN)
+
+MOSFET(V+) ---> MOTOR(+)
+
+MOSFET(V-) ---> MOTOR(-)
+
+MOSFET(SIG) ---> Arduino(Pin 13)
+
+MOSFET(GND) ---> Arduino(GND)
+
+IR Reciever(G) ---> Arduino(GND)
+
+IR Reciever(R) ---> Arduino(5V)
+
+IR Reciever(Y) ---> Arduino(Pin 11)
+
+------------------------- Trigger shoot --------------------------
+
+Battery(-) ---> Trigger board(input) (the one in the back)
+
+Trigger board(output) (the one in front) ---> Motor(-)
+
+Battery(+) ---> Motor(+)
+
+
+MOSFET modul slöar antagligen ner motorn. Den går snabbare när jag bara kopplar batteriet direkt på motor utan MOSFET
+
+Mät spänning på motorn vid drift utan MOSFET (Batteri direkt på motor)
+
+Möjligen att krokodil sladdarna inte får nog med kontakt som orsakar spänningsfall men troligen inte
+
+Mät spänning över MOSFET när motorn kör (Mät över battery(GND) och motor(GND) på mosfet eller Battery(+) motor(+))
+
+Mät Gate spänning till MOSFET för att se om den slår på helt
